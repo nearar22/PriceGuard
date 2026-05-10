@@ -48,7 +48,7 @@ export default function App() {
 
   // Set <title> + meta tags (replaces TanStack Router's head() helper).
   useEffect(() => {
-    document.title = "PriceGuard — AI Price Verification on GenLayer";
+    document.title = "PriceGuard - AI Price Verification on GenLayer";
   }, []);
 
   const handleSubmit = async (p: SubmitPayload) => {

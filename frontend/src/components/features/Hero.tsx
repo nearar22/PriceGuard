@@ -29,7 +29,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
           className="mx-auto mt-5 max-w-2xl text-base text-muted-foreground sm:text-lg"
         >
-          Paste any product URL — autonomous AI validators on GenLayer scrape, debate, and reach
+          Paste any product URL. Autonomous AI validators on GenLayer scrape, debate, and reach
           consensus on whether you've found a great deal, a fair price, or a scam. Every verdict
           is permanently recorded on-chain.
         </motion.p>

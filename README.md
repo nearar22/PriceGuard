@@ -1,14 +1,14 @@
-# 💰 PriceGuard — AI-Powered Price Verification on GenLayer
+﻿# 💰 PriceGuard - AI-Powered Price Verification on GenLayer
 
 ## 🌟 Overview
 
-**PriceGuard** is a decentralized price verification platform built on the **GenLayer blockchain**. It uses GenLayer's **Intelligent Contracts** to determine whether a product's price is fair, overpriced, a great deal, or a scam — all verified through AI consensus and stored on-chain.
+**PriceGuard** is a decentralized price verification platform built on the **GenLayer blockchain**. It uses GenLayer's **Intelligent Contracts** to determine whether a product's price is fair, overpriced, a great deal, or a scam - all verified through AI consensus and stored on-chain.
 
 Online shoppers face constant pricing manipulation: fake discounts, inflated markups, counterfeit products at suspicious prices. PriceGuard solves this by leveraging GenLayer's unique capabilities:
 
-1. **Web Scraping** (`gl.get_webpage`) — AI validators independently fetch and read product pages
-2. **LLM Analysis** (`gl.exec_prompt`) — Each validator analyzes the product, price, and market context
-3. **Consensus** (`gl.eq_principle_strict_eq`) — Validators must agree on the verdict, ensuring trustworthy results
+1. **Web Scraping** (`gl.get_webpage`) - AI validators independently fetch and read product pages
+2. **LLM Analysis** (`gl.exec_prompt`) - Each validator analyzes the product, price, and market context
+3. **Consensus** (`gl.eq_principle_strict_eq`) - Validators must agree on the verdict, ensuring trustworthy results
 
 > No middleman. No affiliate bias. The blockchain itself reads the web and verifies prices.
 
@@ -16,14 +16,14 @@ Online shoppers face constant pricing manipulation: fake discounts, inflated mar
 
 ## ✨ Features
 
-- **URL Price Check** — Paste any product URL (Amazon, eBay, AliExpress, Walmart) and get an AI-verified price analysis
-- **Manual Price Check** — Enter product name + price + store for instant market comparison
-- **4-Tier Verdicts** — 🎉 GREAT DEAL / ✅ FAIR PRICE / ⚠️ OVERPRICED / 🚨 SCAM ALERT
-- **Fair Price Estimate** — AI calculates what the product should actually cost
-- **Savings Calculator** — Shows exact % above or below fair market value
-- **Price Factor Tags** — Identifies why (seasonal sale, authorized dealer, counterfeit risk, markup)
-- **On-Chain Registry** — All price checks stored permanently on GenLayer
-- **Platform Stats** — Real-time dashboard with verification statistics
+- **URL Price Check** - Paste any product URL (Amazon, eBay, AliExpress, Walmart) and get an AI-verified price analysis
+- **Manual Price Check** - Enter product name + price + store for instant market comparison
+- **4-Tier Verdicts** - 🎉 GREAT DEAL / ✅ FAIR PRICE / ⚠️ OVERPRICED / 🚨 SCAM ALERT
+- **Fair Price Estimate** - AI calculates what the product should actually cost
+- **Savings Calculator** - Shows exact % above or below fair market value
+- **Price Factor Tags** - Identifies why (seasonal sale, authorized dealer, counterfeit risk, markup)
+- **On-Chain Registry** - All price checks stored permanently on GenLayer
+- **Platform Stats** - Real-time dashboard with verification statistics
 
 ---
 
@@ -85,7 +85,7 @@ PriceGuard/
 ```
 
 ### Tech Stack
-- **Smart Contract**: Python (GenLayer SDK) — `gl.get_webpage`, `gl.exec_prompt`, `gl.eq_principle_strict_eq`
+- **Smart Contract**: Python (GenLayer SDK) - `gl.get_webpage`, `gl.exec_prompt`, `gl.eq_principle_strict_eq`
 - **Frontend**: React + Vite
 - **Styling**: Custom CSS (Glassmorphism, dark theme, micro-animations)
 - **Client**: `genlayer-js` (Official GenLayer JavaScript SDK)
@@ -109,7 +109,7 @@ PriceGuard/
 cd frontend
 npm install
 cp .env.example .env
-# Edit .env — paste your contract address:
+# Edit .env - paste your contract address:
 # VITE_CONTRACT_ADDRESS=0xYOUR_ADDRESS_HERE
 npm run dev
 ```
@@ -137,7 +137,7 @@ The app runs in **Demo Mode** automatically when `VITE_CONTRACT_ADDRESS` is not 
 |--------|------|-------------|
 | `get_check` | `check_id: int` | Get a single price check result |
 | `get_recent_checks` | `count: int` | Get N most recent checks |
-| `get_stats` | — | Global platform statistics |
+| `get_stats` | - | Global platform statistics |
 | `get_user_stats` | `user: Address` | User check count |
 
 ### Supported Categories
@@ -156,12 +156,12 @@ The app runs in **Demo Mode** automatically when `VITE_CONTRACT_ADDRESS` is not 
 
 ## 🎯 What Makes PriceGuard Unique
 
-1. **Real Web Scraping** — PriceGuard actually reads product pages from the live web
-2. **AI Market Intelligence** — Cross-references products against known market prices
-3. **Scam Detection** — Flags suspiciously low prices that indicate counterfeits or bait-and-switch
-4. **On-Chain Transparency** — Every price check is permanently stored and verifiable
-5. **No Affiliate Bias** — AI validators have no financial incentive to recommend purchases
-6. **Real-World Impact** — Online scams cost consumers $8.8 billion in 2022 (FTC)
+1. **Real Web Scraping** - PriceGuard actually reads product pages from the live web
+2. **AI Market Intelligence** - Cross-references products against known market prices
+3. **Scam Detection** - Flags suspiciously low prices that indicate counterfeits or bait-and-switch
+4. **On-Chain Transparency** - Every price check is permanently stored and verifiable
+5. **No Affiliate Bias** - AI validators have no financial incentive to recommend purchases
+6. **Real-World Impact** - Online scams cost consumers $8.8 billion in 2022 (FTC)
 
 ---
 

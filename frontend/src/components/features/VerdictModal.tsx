@@ -67,8 +67,7 @@ export function VerdictModal({
                   </>
                 ) : (
                   <>
-                    Our AI couldn't find a reliable market baseline for this product —
-                    it may be unreleased, too niche, or the name may be ambiguous.
+                    Our AI couldn't find a reliable market baseline for this product. It may be unreleased, too niche, or the name may be ambiguous.
                     The verdict is recorded on-chain. Try a more specific product
                     name (e.g. full model / SKU) and a known store.
                   </>
