@@ -8,12 +8,20 @@ const PK_KEY = "priceguard_session_pk";
 
 const env = (typeof import.meta !== "undefined" && (import.meta as any).env) || {};
 
-export const MOCK_MODE: boolean =
-  env.VITE_MOCK_MODE === "true" || !env.VITE_CONTRACT_ADDRESS;
+// Hardcoded fallback for the deployed contract on GenLayer Studionet. The
+// env var override exists for local dev / staging contracts; production
+// always falls back here when no env var is set (e.g. on Vercel).
+const HARDCODED_CONTRACT_ADDRESS = "0x697be330689157AA29ba9eA30666DE5Ae18C1820";
 
 export const CONTRACT_ADDRESS: `0x${string}` =
-  (env.VITE_CONTRACT_ADDRESS as `0x${string}`) ||
-  ("0x697be330689157AA29ba9eA30666DE5Ae18C1820" as `0x${string}`);
+  ((env.VITE_CONTRACT_ADDRESS as string) || HARDCODED_CONTRACT_ADDRESS) as `0x${string}`;
+
+// MOCK_MODE is opt-in only via VITE_MOCK_MODE=true. Previously it auto-
+// activated whenever the env var VITE_CONTRACT_ADDRESS was missing, which
+// silently broke production deploys (Vercel without env vars) by routing
+// every "submit" to a fake-transaction code path even though a real
+// contract address was hardcoded above. Now: real contract always.
+export const MOCK_MODE: boolean = env.VITE_MOCK_MODE === "true";
 
 const RPC_URL: string | undefined = env.VITE_GENLAYER_RPC_URL;
 const CHAIN_CONFIG = RPC_URL
