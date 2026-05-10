@@ -4,3 +4,4 @@ dist/
 .env.local
 *.log
 .DS_Store
+frontend/src.backup-20260508-093157/
