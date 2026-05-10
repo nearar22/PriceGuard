@@ -18,7 +18,10 @@ export const useAppStore = create<AppState>((set) => ({
   liveMode: false,
   setLiveMode: (v) => set({ liveMode: v }),
   refresh: async () => {
-    set({ loading: true });
+    // Only flash the loading skeleton on the very first refresh. Once we have
+    // data, subsequent polling refreshes update silently so the registry
+    // doesn't flicker every 5s while a recent submission's tx is finalising.
+    set((s) => (s.stats === null ? { loading: true } : {}));
     const [stats, checks] = await Promise.all([getStats(), getRecentChecks(20)]);
     set({ stats, checks, loading: false });
   },
